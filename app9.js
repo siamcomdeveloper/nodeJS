@@ -1,3 +1,4 @@
+console.log("Stream Reader");
 var fs = require('fs');
 var data='';
 var readStream = fs.createReadStream('code.txt','utf8');
