@@ -1,3 +1,3 @@
 console.log('Module Export Require');
-var response = Require('./method.js');
+var response = require('./method.js');
 response.update();
