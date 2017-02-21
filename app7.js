@@ -8,4 +8,4 @@ len = buf3.write("SIAM");
 console.log(len);
 var buf4 = new Buffer(4);
 buf4.write("SIAM");
-console.log(buf.toString());
+console.log(buf4.toString());
