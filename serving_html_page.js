@@ -1,13 +1,8 @@
-/*console.log('Create Server');
+console.log('Serving HTML Page');
+var fs = require('fs');
 var http = require('http');
 http.createServer(function(req,res){
   res.writeHead(200,{'content-Type':"text/planin"});
-  res.end("Helloworld");
-}).listen(8080);*/
-
-console.log('Create Server');
-var http = require('http');
-http.createServer( function(req,res) {
-  res.writeHead(200,{'Content-Type':'text/plain'});
-  res.end("Helloworld");
+  var myStream = fs.createReadStream(__dirname+"/"+'index.html',utf8');
+  myStream.pipe(res);
 }).listen(8080);
