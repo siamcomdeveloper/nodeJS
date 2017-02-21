@@ -4,7 +4,7 @@ var app = express();
 var con = mysql.createConnection({
 // propertis...
   host: 'localhost',
-  user: 'root';
+  user: 'root',
   password: '123456',
   database: 'blogs'
 });
