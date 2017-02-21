@@ -4,6 +4,6 @@ var data = 'Siam Ngan';
 var writeStream = fs.createWriteStream('output.txt');
 writeStream.write(data,'utf8');
 writeStream.end();
-wrteStream.on('finish',function(){
+writeStream.on('finish',function(){
   console.lof("output Finish");
 });
