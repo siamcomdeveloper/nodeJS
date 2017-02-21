@@ -8,6 +8,6 @@ var add=function(a,b){
   return a+b;
 }
 
-export.pi=pi;
-export.add=add;
-export.update=update;
+exports.pi=pi;
+exports.add=add;
+exports.update=update;
