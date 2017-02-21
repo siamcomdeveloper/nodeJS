@@ -5,7 +5,7 @@ routing.get('/',function(req,res){
   res.send("<h1>Helloworld</h1>");
 });
 routing.get('/about/:name',function(req,res){
-  res.send("<h1>About " + req.param.name +"</h1>");
+  res.send("<h1>About " + req.params.name +"</h1>");
 });
 routing.get('/contact',function(req,res){
   res.send("<h1>Contact</h1>");
