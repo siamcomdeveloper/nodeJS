@@ -20,7 +20,7 @@ con.connect(function(err){
 app.get('/', function(req, resp){
   con.query("SELECT * FORM blogs", function(err, rows, fields){
     if(err){
-      console.log('Error in the query');
+      console.log('Error in the query ' + err.stack);
     } else{
       console.log('Successful query');
     }
