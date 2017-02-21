@@ -6,7 +6,7 @@ var con = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
-  database: 'blogs'
+  database: 'blog'
 });
 
 con.connect(function(err){
@@ -18,7 +18,7 @@ con.connect(function(err){
 });
 
 app.get('/', function(req, resp){
-  con.query("SELECT * FORM BLOGS", function(err, rows, fields){
+  con.query("SELECT * FORM blogs", function(err, rows, fields){
     if(err){
       console.log('Error in the query');
     } else{
