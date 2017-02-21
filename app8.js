@@ -1,7 +1,8 @@
 
 console.log("Buffer JSON");
+
 var buf = new Buffer("Siam Ngan",'utf8');
-var json = buf.toJSON(buf);
+var json = buf.toJSON(buf.toString());
 console.log(json);
 
 var buf1 = new Buffer("siam");
