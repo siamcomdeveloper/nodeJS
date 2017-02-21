@@ -1,6 +1,9 @@
 console.log('Post Method');
 var express = require('express');
+var body = require('body-parser');
 var app = express();
+//use body for POST
+app.use(body());
 //set view
 app.set('view engine','ejs');
 app.get('/showForm',function(req,res){
@@ -8,8 +11,8 @@ app.get('/showForm',function(req,res){
 });
 app.post('/showData',function(req,res){
   data={
-    fname:req.query.fname,
-    lname:req.query.lname
+    fname:req.body.fname,
+    lname:req.body.lname
   };
   console.log(data);
   res.end(JSON.stringify(data));
