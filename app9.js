@@ -1,4 +1,10 @@
 var fs = require('fs');
+var data='';
 var readStream = fs.createReadStream('code.txt','utf8');
 readStream.setEncoding('utf8');
-console.log(readStream);
+readStream.on('data',function(txt){
+  data += txt;
+});
+readStream.on('end',function(){
+  console.log(data);
+});
