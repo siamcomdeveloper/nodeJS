@@ -23,11 +23,10 @@ app.get('/', function(req, resp){
             console.log('Error in the query ' + err.stack);
           } else{
             console.log('Successful query');
-            console.log(rows);
-            console.log('rows[0] = ' + rows[0]);
+            //console.log(rows);
             console.log('rows[0].topic = ' + rows[0].topic);
             resp.send("Topic is " + rows[0].topic + "<br>");
-            resp.json(rows);
+            //resp.json(rows);
           }
         });
      }
