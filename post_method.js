@@ -1,4 +1,4 @@
-console.log('Get Method');
+console.log('Post Method');
 var express = require('express');
 var app = express();
 //set view
