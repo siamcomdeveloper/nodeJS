@@ -23,6 +23,9 @@ app.get('/', function(req, resp){
       console.log('Error in the query ' + err.stack);
     } else{
       console.log('Successful query');
+      console.log(rows);
+      console.log('row[0] = ' + rows[0]);
+      console.log('rows[0].topic = ' + rows[0].topic);
     }
   });
 });
