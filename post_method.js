@@ -15,6 +15,6 @@ app.post('/showData',function(req,res){
     lname:req.body.lname
   };
   console.log(data);
-  res.end(JSON.stringify(data));
+  res.end("<h1>" + data.fname + "</h1>");
 });
 app.listen(8080);
