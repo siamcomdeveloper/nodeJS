@@ -26,7 +26,7 @@ app.get('/', function(req, resp){
             //console.log(rows);
             console.log('rows[0].topic = ' + rows[0].topic);
             resp.send("Topic is " + rows[0].topic + "<br>");
-            resp.json(rows);
+            resp.end(JSON.stringify(rows));
           }
         });
      }
