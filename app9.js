@@ -10,4 +10,4 @@ readStream.on('end',function(){
 });
 readStream.on('error',function(err){
   console.log(err.stack);
-}
+});
