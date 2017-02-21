@@ -10,6 +10,7 @@ function printWorld(){
   console.log("World");
 }
 var t = setTimeout(printHello,1000);
-clearTimeout(t);
 
 setInterval(printWorld,2000);
+
+clearTimeout(t);
