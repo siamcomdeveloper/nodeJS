@@ -5,7 +5,11 @@ console.log(__dirname);
 function printHello(){
   console.log("Hello");
 }
-var t = setTimeout(printHello,100);
+
+function printWorld(){
+  console.log("World");
+}
+var t = setTimeout(printHello,1000);
 clearTimeout(t);
 
-setInterval(printHello,2000);
+setInterval(printWorld,2000);
