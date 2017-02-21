@@ -3,15 +3,14 @@ var express = require('express');
 var app = express();
 //set view
 app.set('view engine','ejs');
-app.get('/showForm',function(req,res){
-  res.sendFile(__dirname + "/" + "form.html");
+app.get('/',function(req,res){
+  res.render('index');
 });
-app.get('/showData',function(req,res){
-  data={
-    fname=req.query.fname,
-    lname=req.query.lname
-  };
-  console.log(data);
-  res.end(JSON.stringify(data));
+app.get('/profiles/:id',function(req,res){
+  var data={name:"siam",job:"developer",age:27};
+  res.render('profiles',{id:req.params.id,user:data});
+});
+app.get('/admin',function(req,res){
+  res.render('database');
 });
 app.listen(8080);
