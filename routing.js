@@ -2,7 +2,7 @@ console.log('Routing');
 var fs = require('fs');
 var http = require('http');
 http.createServer(function(req,res){
-  if(res.url === '/home' || req.url ==='/' ){
+  if(res.url === '/home' || req.url === '/' ){
     res.writeHead(200,{'content-Type':"text/html"});//200 = Ok
     var myStream = fs.createReadStream(__dirname + "/" + 'index.html' ,'utf8');
   }
