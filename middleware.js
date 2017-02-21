@@ -6,6 +6,6 @@ app.get('/',function(req,res){
 });
 //Midleware = use
 app.use('/user/about/:name',function(req,res,next){
-  console.log("Requrest : " + new Date() , req.method , req.url);
+  console.log("Requrest : " + req.params.name + " " + new Date());
 });
 app.listen(8080);
