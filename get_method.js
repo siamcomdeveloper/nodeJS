@@ -8,8 +8,8 @@ app.get('/showForm',function(req,res){
 });
 app.get('/showData',function(req,res){
   data={
-    fname=req.query.fname,
-    lname=req.query.lname
+    fname:req.query.fname,
+    lname:req.query.lname
   };
   console.log(data);
   res.end(JSON.stringify(data));
