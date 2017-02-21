@@ -2,15 +2,15 @@ console.log('Routing');
 var fs = require('fs');
 var http = require('http');
 http.createServer(function(req,res){
-  if(res.url === '/home' || req.url === '/' ){
+  if(req.url === '/home' || req.url === '/' ){
     res.writeHead(200,{'content-Type':"text/html"});//200 = Ok
     var myStream = fs.createReadStream(__dirname + "/" + 'index.html' ,'utf8');
   }
-  else if(res.url === '/about'){
+  else if(req.url === '/about'){
     res.writeHead(200,{'content-Type':"text/html"});
     var myStream = fs.createReadStream(__dirname + "/" + 'about.html' ,'utf8');
   }
-  else if(res.url === '/contact'){
+  else if(req.url === '/contact'){
     res.writeHead(200,{'content-Type':"text/html"});
     var myStream = fs.createReadStream(__dirname + "/" + 'contact.html' ,'utf8');
   }
