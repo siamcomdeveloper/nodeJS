@@ -18,3 +18,4 @@ for (var i = 0; i < 25; i++){
   buf5[i] = i + 97;
 }
 console.log(buf5.toString());
+console.log(buf5.toString('ascii'));
