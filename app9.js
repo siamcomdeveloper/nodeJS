@@ -8,3 +8,6 @@ readStream.on('data',function(txt){
 readStream.on('end',function(){
   console.log(data);
 });
+readStream.on('error',function(err){
+  console.log(err.stack);
+}
