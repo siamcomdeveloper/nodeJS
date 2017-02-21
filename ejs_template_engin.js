@@ -8,7 +8,7 @@ app.set('view engine','ejs');
   res.render('profiles',{id:req.params.id,user:data});
 });*/
 app.get('/',function(req,res){
-  res.render('index.ejs');
+  res.render('index');
 });
 app.get('/profiles',function(req,res){
   res.render('profiles');
@@ -16,5 +16,4 @@ app.get('/profiles',function(req,res){
 app.get('/admin',function(req,res){
   res.render('database');
 });
-
 app.listen(8080);
