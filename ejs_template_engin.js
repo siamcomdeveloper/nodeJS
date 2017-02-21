@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 //set view
 app.set('view engin','ejs');
-app.get('/',function(req,res){
-  res.render('about');
+app.get('/profiles',function(req,res){
+  res.render('profiles');
 });
 app.listen(8080);
