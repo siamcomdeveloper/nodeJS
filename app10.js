@@ -5,5 +5,5 @@ var writeStream = fs.createWriteStream('output.txt');
 writeStream.write(data,'utf8');
 writeStream.end();
 writeStream.on('finish',function(){
-  console.lof("output Finish");
+  console.log("output Finish");
 });
