@@ -98,7 +98,7 @@ exports.save_edit = function(req,res){
 
 exports.delete_blog = function(req,res){
 
-     var id = req.params.id;
+     var id = req.body.id;
 
      req.getConnection(function (err, connection) {
 
