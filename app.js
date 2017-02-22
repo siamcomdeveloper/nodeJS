@@ -7,7 +7,7 @@ var mysql = require('mysql');
 var connection  = require('express-myconnection');
 //load blogs route
 console.log(__dirname + '/' + 'routes');
-var routes = require('/routes');
+var routes = require('./routes');
 var blogs = require('./routes/blogs');
 var app = express();
 //set and use module
