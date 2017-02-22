@@ -34,7 +34,7 @@ app.post('/blogs/add', blogs.save);//insert blog
 app.get('/blogs/delete/:id', blogs.delete_blog);
 app.get('/blogs/edit/:id', blogs.edit);//goto form edit blog
 app.post('/blogs/edit/:id',blogs.save_edit);//edit blog route , get n post
-app.use(app.router);
+//app.use(app.router);
 http.createServer(app).listen(8080, function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
