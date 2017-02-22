@@ -6,7 +6,7 @@
 exports.list = function(req, res){
   req.getConnection(function(err,connection){
 
-     connection.query('SELECT * FROM blog',function(err,rows)     {
+     connection.query('SELECT * FROM blogs',function(err,rows)     {
 
         if(err)
            console.log("Error Selecting : %s ",err );
