@@ -44,9 +44,14 @@ exports.edit = function(req, res){
 
 /*Add blog = Create & Insert the blog*/
 exports.save = function(req,res){
-    console.log(req.body);
-    console.log(JSON.stringify(req.body));
-    console.log(JSON.parse(JSON.stringify(req.body)));
+    console.log(req.body.topic);
+    console.log(req.body.content);
+    data={
+      topic:req.body.topic,
+      content:req.body.content
+    };
+    console.log(data);
+    console.log(JSON.stringify(data));
 
     var input = JSON.parse(JSON.stringify(req.body));
     console.log(input);
