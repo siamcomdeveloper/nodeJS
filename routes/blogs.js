@@ -35,7 +35,7 @@ exports.edit = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
 
-            res.render('showformedit',{page_title:"Edit blogs",data:rows});
+            res.render('showformedit',{page_title:"Edit blogs",data:rows[0]});
 
          });
 
