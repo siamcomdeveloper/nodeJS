@@ -20,7 +20,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('showform',{page_title:"Add blogs",url:'/blogs/add'});
+  res.render('showform',{page_title:"Add blogs"});
 };
 
 exports.edit = function(req, res){
@@ -35,7 +35,7 @@ exports.edit = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
 
-            res.render('showform',{page_title:"Edit blogs",url:'/blogs/edit',data:rows});
+            res.render('showform',{page_title:"Edit blogs",data:rows});
 
          });
 
