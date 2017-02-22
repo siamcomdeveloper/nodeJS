@@ -11,7 +11,7 @@ exports.list = function(req, res){
         if(err)
            console.log("Error Selecting : %s ",err );
 
-            res.render('showlist',{page_title:"All blogs",data:rows});
+            res.render('showlist',{page_title:"Create blogs",data:rows});
 
          });
 
