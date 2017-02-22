@@ -11,7 +11,7 @@ exports.list = function(req, res){
         if(err)
            console.log("Error Selecting : %s ",err );
 
-            res.render('showlist',{page_title:"Create blogs",data:rows});
+            res.render('showlist',{page_title:"All blogs",data:rows});
 
          });
 
@@ -20,7 +20,7 @@ exports.list = function(req, res){
 };
 
 exports.add = function(req, res){
-  res.render('showformadd',{page_title:"Add blogs"});
+  res.render('showformadd',{page_title:"Create blogs"});
 };
 
 exports.edit = function(req, res){
