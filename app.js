@@ -13,7 +13,7 @@ var app = express();
 //set and use module
 app.set('view engine', 'ejs');
 app.use('/static', express.static('public'));
-app.use(express.json());
+//app.use(express.json());
 /*------------------------------------------
     connection peer, register as middleware
     type koneksi : single,pool and request
