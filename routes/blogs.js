@@ -75,12 +75,7 @@ exports.save_edit = function(req,res){
 
     var input = JSON.parse(JSON.stringify(req.body));
 
-    console.log(req.body.id);
-
     var id = req.body.id;
-
-    console.log(input.topic);
-    console.log(input.content);
 
     req.getConnection(function (err, connection) {
 
