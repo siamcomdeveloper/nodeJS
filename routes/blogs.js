@@ -25,6 +25,7 @@ exports.add = function(req, res){
 
 exports.edit = function(req, res){
 
+  console.log(req.params.id);
   var id = req.params.id;
 
   req.getConnection(function(err,connection){
@@ -72,9 +73,10 @@ exports.save = function(req,res){
 
 /*Edit = Edit & Update edited blog*/
 exports.save_edit = function(req,res){
-
+    console.log(req.body);
     var input = JSON.parse(JSON.stringify(req.body));
-    var id = req.params.id;
+    console.log(input);
+    var id = req.body.id;
 
     req.getConnection(function (err, connection) {
 
@@ -98,8 +100,8 @@ exports.save_edit = function(req,res){
 
 exports.delete_blog = function(req,res){
 
-     var id = req.body.id;
-     console.log(req.body.id);
+     var id = req.params.id;
+     console.log(req.params.id);
      req.getConnection(function (err, connection) {
 
         connection.query("DELETE FROM blogs WHERE id = ? ",[id], function(err, rows)
