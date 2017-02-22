@@ -5,12 +5,14 @@ var http = require('http');
 var express = require('express');
 var mysql = require('mysql');
 var connection  = require('express-myconnection');
+var body = require('body-parser');
 //load blogs route
 //console.log(__dirname + '/' + 'routes');
 //var routes = require('./routes');
 var blogs = require('./routes/blogs.js');
 var app = express();
 //set and use module
+app.use(body());
 app.set('view engine', 'ejs');
 app.use('/static', express.static('public'));
 //app.use(express.json());
