@@ -72,10 +72,15 @@ exports.save = function(req,res){
 
 /*Edit = Edit & Update edited blog*/
 exports.save_edit = function(req,res){
-    console.log(req.body);
+
     var input = JSON.parse(JSON.stringify(req.body));
-    console.log(input);
+
+    console.log(req.body.id);
+
     var id = req.body.id;
+
+    console.log(input.topic);
+    console.log(input.content);
 
     req.getConnection(function (err, connection) {
 
