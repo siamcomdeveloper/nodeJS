@@ -6,9 +6,9 @@ var express = require('express');
 var mysql = require('mysql');
 var connection  = require('express-myconnection');
 //load blogs route
-console.log(__dirname + '/' + 'routes');
-var routes = require('./routes');
-var blogs = require('./routes/blogs');
+//console.log(__dirname + '/' + 'routes');
+//var routes = require('./routes');
+var blogs = require('./routes/blogs.js');
 var app = express();
 //set and use module
 app.set('view engine', 'ejs');
@@ -27,7 +27,7 @@ app.use(
         database: 'blog'
     },'request')
 );
-app.get('/', routes.index);//route index
+//app.get('/', routes.index);//route index
 app.get('/blogs', blogs.list);//route blog list
 app.get('/blogs/add', blogs.add);//goto form new blog
 app.post('/blogs/add', blogs.save);//insert blog
