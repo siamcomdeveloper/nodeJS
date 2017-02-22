@@ -25,7 +25,6 @@ exports.add = function(req, res){
 
 exports.edit = function(req, res){
 
-  console.log(req.params.id);
   var id = req.params.id;
 
   req.getConnection(function(err,connection){
@@ -36,6 +35,7 @@ exports.edit = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
 
+            console.log(rows);
             res.render('showformedit',{page_title:"Edit blogs",data:rows});
 
          });
@@ -101,7 +101,7 @@ exports.save_edit = function(req,res){
 exports.delete_blog = function(req,res){
 
      var id = req.params.id;
-     console.log(req.params.id);
+
      req.getConnection(function (err, connection) {
 
         connection.query("DELETE FROM blogs WHERE id = ? ",[id], function(err, rows)
