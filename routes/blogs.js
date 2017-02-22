@@ -99,10 +99,10 @@ exports.save_edit = function(req,res){
 exports.delete_blog = function(req,res){
 
      var id = req.body.id;
-
+     console.log(req.body.id);
      req.getConnection(function (err, connection) {
 
-        connection.query("DELETE FROM blogs  WHERE id = ? ",[id], function(err, rows)
+        connection.query("DELETE FROM blogs WHERE id = ? ",[id], function(err, rows)
         {
 
              if(err)
