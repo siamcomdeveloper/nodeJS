@@ -50,8 +50,9 @@ exports.save = function(req,res){
     req.getConnection(function (err, connection) {
 
         var data = {
-          topic    : input.topic,
-          content : input.content
+          topic   : input.topic,
+          content : input.content,
+          user_id : 9
         };
 
         var query = connection.query("INSERT INTO blogs set ? ",data, function(err, rows)
