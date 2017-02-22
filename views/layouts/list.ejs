@@ -5,6 +5,9 @@
             <table class="table table-striped">
                 <tr>
                     <th>
+                        NO.
+                    </th>
+                    <th>
                         ID
                     </th>
                     <th>
@@ -17,25 +20,26 @@
                         Action
                     </th>
                 </tr>
-                <% objs.forEach(function(row){ %>
+                <% for(var i = 0;i < data.length;i++) { %>
                 <tr>
+                  <td><%=(i+1)%></td>
                     <td>
-                        <%= row.id %>
+                        <%= data[i].id %>
                     </td>
                     <td>
-                        <%= row.topic %>
+                        <%= data[i].topic %>
                     </td>
                     <td>
-                        <%= row.content %>
+                        <%= data[i].content %>
                     </td>
                     <td>
-                        <a id="edit" class="fl btn btn-primary" href="../admin/blogs/edit/<%=row.id%>">Edit</a>
-                        <form action="../admin/blogs/delete/<%=row.id%>" method="post" onsubmit="return(confirm('Do you want to delete this ?'))">
+                        <a id="edit" class="fl btn btn-primary" href="../admin/blogs/edit/<%=data[i].id%>">Edit</a>
+                        <form action="../admin/blogs/delete/<%=data[i].id%>" method="post" onsubmit="return(confirm('Do you want to delete this ?'))">
                         <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
-                <% }); %>
+                <% } %>
             </table>
         </div>
       </div>
